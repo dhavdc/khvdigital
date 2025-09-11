@@ -1,12 +1,29 @@
-# React + Vite
+# khvdigital.com
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Static site for KHV Digital, featuring the Comms: Pilot Training app.
 
-Currently, two official plugins are available:
+## Local development
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+npm install
+npm run dev
+```
 
-## Expanding the ESLint configuration
+## Build
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm run build
+```
+
+## Deploy (GitHub Pages via Actions)
+
+This repo includes a workflow that builds with Vite and deploys to GitHub Pages on pushes to `main`.
+
+### Steps
+
+1. Create a new GitHub repository and push this code.
+2. In the repo Settings → Pages, ensure Source is set to "GitHub Actions".
+3. Add a custom domain `khvdigital.com` in Pages settings.
+4. Configure DNS A/AAAA records at your registrar to point the apex domain to GitHub Pages.
+
+The `public/CNAME` file is included so the CNAME is preserved on deploy.
